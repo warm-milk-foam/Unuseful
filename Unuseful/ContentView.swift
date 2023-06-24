@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var starMessages = ["Sir dont share your pee colour in this server", "I just wasted all my super reactions on this, what a great use of $99", "Anyway please continue being ridiculous"]
     var body: some View {
         VStack {
             Image(systemName: "globe")
