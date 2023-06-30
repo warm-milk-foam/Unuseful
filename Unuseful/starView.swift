@@ -10,6 +10,7 @@ var starMessages = ["Sir dont share your pee colour in this server", "I just was
 struct starView: View {
     var body: some View {
         Text(starMessages[0])
+            .multilineTextAlignment(.center)
     }
 }
 
