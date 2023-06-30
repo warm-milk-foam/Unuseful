@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
     var body: some View {
         TabView{
             photoView()
@@ -18,7 +17,7 @@ struct ContentView: View {
                 }
             starView()
                 .tabItem(){
-                    Label("Stars", systemImage: "person")
+                    Label("Saumil Says", systemImage: "person")
                 }
             quoteView()
                 .tabItem(){
