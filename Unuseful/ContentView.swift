@@ -14,15 +14,15 @@ struct ContentView: View {
         TabView{
             photoView()
                 .tabItem(){
-                    Label("Thet Pai", systemImage: "person")
+                    Label("Pictures", systemImage: "person")
                 }
             starView()
                 .tabItem(){
-                    Label("Ingo", systemImage: "person")
+                    Label("Stars", systemImage: "person")
                 }
             quoteView()
                 .tabItem(){
-                    Label("Hongyu", systemImage: "person")
+                    Label("Quotes", systemImage: "person")
                 }
         }
         
