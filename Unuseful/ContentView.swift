@@ -9,30 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 3
+    @State private var yLo = -80
     var body: some View {
-        TabView(selection: $selection){
-            photoView()
-                .tabItem(){
-                    Label("Pictures", systemImage: "photo")
-                }.tag(1)
-            starView()
-                .tabItem(){
-                    Label("Saumil Says", systemImage: "speaker.wave.2.circle")
-                }.tag(2)
-            homeView()
-                .tabItem(){
-                    Label("Home", systemImage: "house.fill")
-                }.tag(3)
-            quoteView()
-                .tabItem(){
-                    Label("Quotes", systemImage: "text.bubble")
-                }.tag(4)
-            creditView()
-                .tabItem(){
-                    Label("Credits", systemImage: "text.word.spacing")
-                }.tag(5)
+        VStack{
+            Image("sovietonion")
+                .resizable()
+                .scaledToFit()
+                
+            TabView(selection: $selection){
+                photoView()
+                    .offset(y: CGFloat(yLo))
+                    .tabItem(){
+                        Label("Pictures", systemImage: "photo")
+                    }.tag(1)
+                starView()
+                    .offset(y: -30)
+                    .tabItem(){
+                        Label("Saumil Says", systemImage: "speaker.wave.2.circle")
+                    }.tag(2)
+                homeView()
+                    .offset(y: CGFloat(yLo))
+                    .tabItem(){
+                        Label("Home", systemImage: "house.fill")
+                    }.tag(3)
+                quoteView()
+                    .offset(y: -70)
+                    .tabItem(){
+                        Label("Quotes", systemImage: "text.bubble")
+                    }.tag(4)
+                creditView()
+                    .offset(y: 0)
+                    .tabItem(){
+                        Label("Credits", systemImage: "text.word.spacing")
+                    }.tag(5)
+            }
+            
         }
-        
     }
 }
 
