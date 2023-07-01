@@ -12,9 +12,7 @@ struct ContentView: View {
     @State private var yLo = -80
     var body: some View {
         VStack{
-            Image("sovietonion")
-                .resizable()
-                .scaledToFit()
+            
                 
             TabView(selection: $selection){
                 photoView()
