@@ -12,29 +12,39 @@ struct photoView: View {
     @State private var wawa = 0
     @State private var currentPicture = pictures.randomElement()
     var body: some View {
-        VStack {
-            Text("beautiful pictures to calm the soul😌")
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
-            currentPicture! // test image
-                .resizable()
-                .scaledToFit()
-                .foregroundColor(.accentColor)
-            Button {
-                    wawa += 1
-                    print("help")
-                currentPicture = pictures.randomElement()
-            } label: {
-                Image("3")
+        ZStack{
+            LinearGradient(
+                gradient: Gradient(colors: [.red, .blue, .yellow]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+                 )
+            .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("beautiful pictures to calm the soul😌")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+                currentPicture! // test image
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 150, height:150)
-                
+                    .foregroundColor(.accentColor)
+                Button {
+                        wawa += 1
+                        print("help")
+                    currentPicture = pictures.randomElement()
+                } label: {
+                    Image("3")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height:150)
+                        .offset(x: 0, y: 20)
+                }
             }
+            .padding()
         }
-        .padding()
     }
-}
+        }
+        
 
 struct photoView_Previews: PreviewProvider {
     static var previews: some View {
