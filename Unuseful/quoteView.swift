@@ -10,11 +10,12 @@ import Foundation
 
 var quotes = ["\"when you fork you can create many different things\" -yj 2023", "\"Generative AIs are prone to hallucination\" -jy soon", "\"bad bot bad bot\" -yjsoon to saumil gpt", "\"i can almost hear the students’ collective moans” - @Kai (2022)\"", "\"Slowmode will never stop our endeavour to count in the wrong places\" -ingo wawa","\"Damn, imagine not being able to send messages in this channel\" - Sean"]
 struct quoteView: View {
-    @State private var isRotating = 0.0
+    @State private var isRotating = false
     @State private var bobo = 0
     @State private var isSheetPresented = false
     @State private var random = 0
-    @State private var speedbutton = 0.3
+    @State private var animationDuration = 1.0
+    @State var speedbutton = 1.0
     var body: some View {
         ZStack {
 
@@ -31,6 +32,9 @@ struct quoteView: View {
                     bobo = Int.random(in: 0...5)
                     let woman = Int.random(in: 0...15)
                     let random = Int.random(in: 2...6)
+                    speedbutton += 1
+                    animationDuration = animationDuration * 0.95
+                    print(speedbutton)
                     print(random)
                     if woman == 3 {
                         isSheetPresented = true
@@ -38,11 +42,12 @@ struct quoteView: View {
                 } label: {
                     Image(systemName: "trash.square.fill")
                         .font(.system(size: 150))
-                        .rotationEffect(.degrees(isRotating))
-                        .onAppear {
-                            withAnimation(.linear(duration: 1.0).speed(0.3)  .repeatForever(autoreverses: false)) {
-                                isRotating = 360.0
+                        .rotationEffect(.degrees(isRotating ? 360 : 0))
+                        .onChange(of: speedbutton) { speed in
+                            withAnimation(.linear(duration: animationDuration).speed(1)  .repeatForever(autoreverses: false)) {
+                                isRotating.toggle()
                             }
+                            print("Refreshed")
                         }
                 }
                 .offset(y: -40)
