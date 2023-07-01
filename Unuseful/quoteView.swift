@@ -14,6 +14,7 @@ struct quoteView: View {
     @State private var bobo = 0
     @State private var isSheetPresented = false
     @State private var random = 0
+    @State private var speedbutton = 0.3
     var body: some View {
         ZStack {
 
@@ -39,7 +40,7 @@ struct quoteView: View {
                         .font(.system(size: 150))
                         .rotationEffect(.degrees(isRotating))
                         .onAppear {
-                            withAnimation(.linear(duration: 1.0).speed(0.3).repeatForever(autoreverses: false)) {
+                            withAnimation(.linear(duration: 1.0).speed(0.3)  .repeatForever(autoreverses: false)) {
                                 isRotating = 360.0
                             }
                         }
