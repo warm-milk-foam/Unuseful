@@ -13,7 +13,7 @@ struct homeView: View {
     @State private var wid = 347.0
     @State private var hei = 512.0
     @State private var yLo1 = 0.0
-    @State private var yLo2 = -300.0
+    @State private var yLo2 = -600.0
     var body: some View {
         ZStack{
             
