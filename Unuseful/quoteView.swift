@@ -22,10 +22,14 @@ struct quoteView: View {
 
             VStack(spacing: 20) {
                 Text("✨Garbage✨")
+                    .padding()
+                    .foregroundColor(.gray)
+                    .background(.red)
                     .offset(y:  -60)
                     .font(.system(size: 40))
                     .multilineTextAlignment(.center)
-                Text("Tap the rubbish for rubbish iuhcajjdnqudn (tap it enough times for something cool)")
+
+                Text("Tap the rubbish for rubbish iuhcajjdnqudn (tap it enough times for something cool) !!!!!1!1!11!!!!1!1")
                 .multilineTextAlignment(.center)
                 .offset(y:-50)
                 Button {
