@@ -16,6 +16,7 @@ struct quoteView: View {
     @State private var random = 0
     @State private var animationDuration = 1.0
     @State var speedbutton = 1.0
+    @State var speed = 1.0
     var body: some View {
         ZStack {
 
@@ -34,6 +35,7 @@ struct quoteView: View {
                     let random = Int.random(in: 2...6)
                     speedbutton += 1
                     animationDuration = animationDuration * 0.95
+                    speed += 1
                     print(speedbutton)
                     print(random)
                     if woman == 3 {
@@ -43,6 +45,7 @@ struct quoteView: View {
                     Image(systemName: "trash.square.fill")
                         .font(.system(size: 150))
                         .rotationEffect(.degrees(isRotating ? 360 : 0))
+                        .animation(.linear(duration: 0.5).repeatForever(autoreverses: false), value: speed)
                         .onChange(of: speedbutton) { speed in
                             withAnimation(.linear(duration: animationDuration).speed(1)  .repeatForever(autoreverses: false)) {
                                 isRotating.toggle()
