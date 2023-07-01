@@ -11,22 +11,24 @@ struct creditView: View {
     var body: some View {
         VStack{
             
-            Text("Credits:")
+            Text("Credits:💫")
                 .bold()
                 .font(.largeTitle)
             Group{
                 Text("Photos Tab: Hongyu")
                     .font(.title2)
                 Text("Photos from: The SAP community")
-                Text("")//Hongyu you  can add credits here
+                    .offset(x: 0,y:3)
+                 //Hongyu you  can add credits here
             }
             Group{
                 Text("Saumil says: Thet Pai")
                     .font(.title2)
-          //          .offset(x: 0,y:70)
+                    .offset(y:8)
                 Text("Messages from: #bestof")
                     .offset(x: 0,y:15)
             }
+
             Group{
                 Text("Home tab: Thet Pai")
                     .font(.title2)
@@ -42,15 +44,15 @@ struct creditView: View {
                     .offset(x: 0,y:60)
                 Text("My epic meme storage has served me well")//Ingo you can add credits here
                     .offset(x: 0,y:69)
-
+                
             }
             Text("Credits tab: Thet Pai and Ingo lol")
                 .font(.title2)
-                .offset(x: 0,y:90)
+                .offset(x: 0,y:80)
             Image("5")
                 .resizable()
                 .frame(width: 300, height: 300)
-                .offset(x: 0,y:100)
+                .offset(x: 0,y:90)
             Text("💖kawaii💖")
                 .foregroundColor(.pink)
                 .offset(x: 100, y: -100)
@@ -59,13 +61,11 @@ struct creditView: View {
                 .font(.system(size:100))
                 .rotationEffect(.degrees(340))
                 .offset(x:-100,y: -240)
-            Text("thwank you OwO 🥰💖")
+            Text("thwank you OwO :3🥰💖")
                 .offset(x: 0, y: -20)
                 .foregroundColor(.blue)
-          // ingo didnt make this trust
-            
+            // ingo didnt make this trust
         }
-        
     }
 }
 
