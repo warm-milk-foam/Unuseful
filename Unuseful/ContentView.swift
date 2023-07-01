@@ -17,7 +17,7 @@ struct ContentView: View {
                 }.tag(1)
             starView()
                 .tabItem(){
-                    Label("Saumil Says", systemImage: "speaker.fill")
+                    Label("Saumil Says", systemImage: "speaker.wave.2.circle")
                 }.tag(2)
             homeView()
                 .tabItem(){
