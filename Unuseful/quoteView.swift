@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-var quotes = ["\"when you fork you can create many different things\" -yj 2023", "\"Generative AIs are prone to hallucination\" -jy soon", "\"bad bot bad bot\" -yjsoon to saumil gpt", "\"i can almost hear the students’ collective moans” - @Kai (2022)\"", "\"Slowmode will never stop our endeavour to count in the wrong places\" -ingo wawa"]
+var quotes = ["\"when you fork you can create many different things\" -yj 2023", "\"Generative AIs are prone to hallucination\" -jy soon", "\"bad bot bad bot\" -yjsoon to saumil gpt", "\"i can almost hear the students’ collective moans” - @Kai (2022)\"", "\"Slowmode will never stop our endeavour to count in the wrong places\" -ingo wawa","\"Damn, imagine not being able to send messages in this channel\" - Sean"]
 struct quoteView: View {
     @State private var isRotating = 0.0
     @State private var bobo = 0
@@ -17,10 +17,11 @@ struct quoteView: View {
             Button{
                print("tapped")
                //withAnimation()
-                bobo = Int.random(in: 0...4); -1
+                bobo = Int.random(in: 0...5) ;
             } label: {
                 Image(systemName: "trash.square.fill")
                     .font(.system(size: 150))
+                    .offset(y: -40)
                     .rotationEffect(.degrees(isRotating))
                     .onAppear {
                         withAnimation(.linear(duration: 1.0).speed(0.3).repeatForever(autoreverses: false)) {
@@ -32,6 +33,9 @@ struct quoteView: View {
                     
             }
             Text("Tap the rubbish for rubbish iuhcajjdnqudn")
+                .offset(x:0, y: -260)
+            Text(quotes[bobo])
+                .offset(x:0, y:40)
         }
     }
 
