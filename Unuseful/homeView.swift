@@ -8,8 +8,44 @@
 import SwiftUI
 
 struct homeView: View {
+    @State private var angle = 0.0
+    @State private var cheese = 0.0
+    @State private var wid = 347.0
+    @State private var hei = 512.0
+    @State private var yLo1 = 0.0
+    @State private var yLo2 = -300.0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image("tablecanon")
+                .resizable()
+                .scaledToFit()
+                .offset(y:yLo2)
+            VStack{
+                Image("cookies")
+                
+                Button{
+                    if cheese == 0{
+                        withAnimation(.linear(duration: 5.0)){
+                            angle += 80.0
+                            cheese += 1.0
+                            yLo2 = 300.0
+                        }
+                    }
+                    
+                }label: {
+                    Text("Accept all cookies")
+                        .font(.largeTitle)
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(50)
+                }
+            }
+            .frame(width:wid,height:hei)
+            .scaledToFit()
+            .rotation3DEffect(Angle(degrees: angle), axis: (x:angle,y:0,z:0))
+            .offset(y: yLo1)
+        }
     }
 }
 
