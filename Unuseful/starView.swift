@@ -9,10 +9,13 @@ import SwiftUI
 struct starView: View {
     var starMessages = ["Sir dont share your pee colour in this server", "I just wasted all my super reactions on this, what a great use of $99", "Anyway please continue being ridiculous","Ok nvm I'm cringe", "(Never)", "yuhan trans?????", "That forehead is wider than my sister","Swift Innovator's Summit 2024: Our grand plan to get rid of you","we do not condone hackintoshing","Sir that’s a war crime","IM DA BIGGEST BIRD IM DA BIGGEST BIRD","Its going to my media","Unless you're james or smth"]
     @State private var currentMessage = ""
+    @State private var yLevel = 0
     var body: some View {
         VStack{
+            Image("saumil")
             Button{
                 currentMessage = starMessages.randomElement()!
+                
             }label: {
                 ZStack{
                     Image(systemName: "button.programmable")
@@ -20,6 +23,8 @@ struct starView: View {
                         .rotation3DEffect(Angle(degrees: 60.0), axis: (x:60,y:0,z:0))
                             Text("Press here")
                         .foregroundColor(.black)
+                        .offset(y: CGFloat(yLevel))
+                        .rotation3DEffect(Angle(degrees: 40.0), axis: (x:40,y:0,z:0))
                 }
             }
             Text("Saumil says..")
