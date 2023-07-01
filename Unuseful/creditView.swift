@@ -71,7 +71,7 @@ struct creditView: View {
 
         }
     }
-        }
+}
 
 
 struct creditView_Previews: PreviewProvider {
