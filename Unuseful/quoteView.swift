@@ -8,8 +8,7 @@
 import SwiftUI
 import Foundation
 
-var quotes = ["\"when you fork you can create many different things\" -yj 2023", "\"Generative AIs are prone to hallucination\" -jy soon", "\"bad bot bad bot\" -yjsoon to saumil gpt", "\"i can almost hear the students’ collective moans” - @Kai (2022)\"", "\"Slowmode will never stop our endeavour to count in the wrong places\" -ingo wawa","\"Damn, imagine not being able to send messages in this channel\" - Sean", "Look behind you."]
-var colours = ["red","blue", "yellow"]
+var quotes = ["\"when you fork you can create many different things\" -yj 2023", "\"Generative AIs are prone to hallucination\" -jy soon", "\"bad bot bad bot\" -yjsoon to saumil gpt", "\"i can almost hear the students’ collective moans” - @Kai (2022)\"", "\"Slowmode will never stop our endeavour to count in the wrong places\" -ingo wawa","\"Damn, imagine not being able to send messages in this channel\" - Sean", "Look behind you.", "just look at the rubbish bin have a seizure are you proud"]
 struct quoteView: View {
     @State private var isRotating = false
     @State private var bobo = 0
@@ -51,7 +50,7 @@ struct quoteView: View {
                 .offset(y:-50)
                 Button {
                   // print("tapped")
-                    bobo = Int.random(in: 0...6)
+                    bobo = Int.random(in: 0...7)
                     let woman = Int.random(in: 0...15)
                  //   let random = Int.random(in: 2...6)
                     speedbutton += 1
