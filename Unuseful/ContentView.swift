@@ -16,22 +16,22 @@ struct ContentView: View {
                 
             TabView(selection: $selection){
                 photoView()
-                    .offset(y: CGFloat(yLo))
+                    .offset(y: 0)
                     .tabItem(){
                         Label("Pictures", systemImage: "photo")
                     }.tag(1)
                 starView()
-                    .offset(y: -30)
+                    .offset(y: 0)
                     .tabItem(){
                         Label("Saumil Says", systemImage: "speaker.wave.2.circle")
                     }.tag(2)
                 homeView()
-                    .offset(y: CGFloat(yLo))
+                    .offset(y: 0)
                     .tabItem(){
                         Label("Home", systemImage: "house.fill")
                     }.tag(3)
                 quoteView()
-                    .offset(y: -70)
+                    .offset(y: 0)
                     .tabItem(){
                         Label("Quotes", systemImage: "text.bubble")
                     }.tag(4)

@@ -25,6 +25,8 @@ struct starView: View {
             }label: {
                 ZStack{
                     Image(systemName: "button.programmable")
+                        .symbolRenderingMode(.palette)
+                            .foregroundStyle(.red, .black)
                         .font(.system(size: 150))
                         .rotation3DEffect(Angle(degrees: 60.0), axis: (x:60,y:0,z:0))
                     Text("Press here")
