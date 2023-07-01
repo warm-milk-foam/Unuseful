@@ -53,7 +53,7 @@ struct quoteView: View {
                   // print("tapped")
                     bobo = Int.random(in: 0...5)
                     let woman = Int.random(in: 0...15)
-                    let random = Int.random(in: 2...6)
+                 //   let random = Int.random(in: 2...6)
                     speedbutton += 1
                     animationDuration = animationDuration * 0.95
                     speed += 1
