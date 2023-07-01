@@ -110,11 +110,11 @@ struct quoteView: View {
                     .aspectRatio(contentMode: .fit)
                 Text("Notice jiahen in the back")
                     .font(.system(size:10))
-                    .opacity(0.3)
+                    .opacity(0.2)
                     .strikethrough()
                 Text("sheet")
                     .font(.system(size:10))
-                    .opacity(0.3)
+                    .opacity(0.2)
                     .strikethrough()
             }
         }
