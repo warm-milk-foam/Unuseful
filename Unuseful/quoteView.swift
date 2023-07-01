@@ -35,6 +35,7 @@ struct quoteView: View {
                     .offset(y:  -60)
                     .font(.system(size: 40))
                     .multilineTextAlignment(.center)
+                 //   .LinearGradient
                     
 
                 Text("""
@@ -82,6 +83,7 @@ struct quoteView: View {
                     .padding()
                     .background(.white)
                     .cornerRadius(25)
+                    .bold()
                 Text(quotes[bobo])
                     .multilineTextAlignment(.center)
                     .italic()
@@ -89,6 +91,7 @@ struct quoteView: View {
                     .foregroundColor(.yellow)
                     .background(.green)
                     .cornerRadius(20)
+                    .bold()
                 
             }
         }
