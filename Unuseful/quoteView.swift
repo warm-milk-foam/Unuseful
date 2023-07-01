@@ -17,7 +17,7 @@ struct quoteView: View {
             Button{
                print("tapped")
                //withAnimation()
-                bobo = Int.random(0...4) -1
+                bobo = Int.random(in: 0...4); -1
             } label: {
                 Image(systemName: "trash.square.fill")
                     .font(.system(size: 150))
