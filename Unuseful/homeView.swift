@@ -13,13 +13,10 @@ struct homeView: View {
     @State private var wid = 347.0
     @State private var hei = 512.0
     @State private var yLo1 = 0.0
-    @State private var yLo2 = -300.0
+    @State private var yLo2 = -600.0
     var body: some View {
-        VStack{
-            Image("tablecanon")
-                .resizable()
-                .scaledToFit()
-                .offset(y:yLo2)
+        ZStack{
+            
             VStack{
                 Image("cookies")
                 
@@ -28,7 +25,7 @@ struct homeView: View {
                         withAnimation(.linear(duration: 5.0)){
                             angle += 80.0
                             cheese += 1.0
-                            yLo2 = 300.0
+                            yLo2 = 0.0
                         }
                     }
                     
@@ -45,6 +42,10 @@ struct homeView: View {
             .scaledToFit()
             .rotation3DEffect(Angle(degrees: angle), axis: (x:angle,y:0,z:0))
             .offset(y: yLo1)
+            Image("tablecanon")
+                .resizable()
+                .scaledToFit()
+                .offset(y:yLo2)
         }
     }
 }
