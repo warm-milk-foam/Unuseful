@@ -79,10 +79,13 @@ struct quoteView: View {
                 .offset(y: -40)
                 
                 
-                Text("🚮wise wisdom:🚮")
+                Text("""
+                     🚮wise wisdom🚮:
+                     ⬇️⬇️⬇️
+                     """)
                     .multilineTextAlignment(.center)
                     .padding()
-                    .background(.white)
+                    .background(.yellow)
                     .cornerRadius(25)
                     .bold()
                 Text(quotes[bobo])
@@ -107,11 +110,11 @@ struct quoteView: View {
                     .aspectRatio(contentMode: .fit)
                 Text("Notice jiahen in the back")
                     .font(.system(size:10))
-                    .opacity(0.5)
+                    .opacity(0.3)
                     .strikethrough()
                 Text("sheet")
                     .font(.system(size:10))
-                    .opacity(0.5)
+                    .opacity(0.3)
                     .strikethrough()
             }
         }
