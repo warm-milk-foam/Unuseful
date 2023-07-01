@@ -15,13 +15,15 @@ struct quoteView: View {
     @State private var isSheetPresented = false
     
     var body: some View {
-        ZStack{
-            Image("3")
-            VStack{
+        ZStack {
+
+            VStack(spacing: 20) {
+                Text("Tap the rubbish for rubbish iuhcajjdnqudn (tap it enough times for something cool)")
+                .multilineTextAlignment(.center)
+                .offset(y:-50)
                 Button {
-                   print("tapped")
-                   //withAnimation()
-                    bobo = Int.random(in: 0...5) ;
+                    print("tapped")
+                    bobo = Int.random(in: 0...5)
                     let woman = Int.random(in: 0...15)
                     if woman == 3 {
                         isSheetPresented = true
@@ -29,34 +31,32 @@ struct quoteView: View {
                 } label: {
                     Image(systemName: "trash.square.fill")
                         .font(.system(size: 150))
-                        .offset(y: -40)
                         .rotationEffect(.degrees(isRotating))
                         .onAppear {
                             withAnimation(.linear(duration: 1.0).speed(0.3).repeatForever(autoreverses: false)) {
                                 isRotating = 360.0
                             }
                         }
-
-                        //.offset(x: 0, y: -100)
-                        
                 }
-                .sheet(isPresented: $isSheetPresented) {
-                    Text("uhhhhhhh have fun lol")
-                    Image("1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-                Text("Tap the rubbish for rubbish iuhcajjdnqudn (tap it enough times for something cool)")
+                .offset(y: -40)
+                
+                
+                Text("Quote of the day:")
                     .multilineTextAlignment(.center)
-                    .offset(x:0, y: -260)
                 Text(quotes[bobo])
-                    .offset(x:0, y:40)
                     .multilineTextAlignment(.center)
+                    .italic()
             }
         }
-
+        .sheet(isPresented: $isSheetPresented) {
+            VStack {
+                Text("uhhhhhhh have fun lol")
+                Image("1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+        }
     }
-
 }
 
 struct quoteView_Previews: PreviewProvider {
