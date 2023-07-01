@@ -18,6 +18,10 @@ struct quoteView: View {
         ZStack {
 
             VStack(spacing: 20) {
+                Text("✨GARBAGE OF WISDOMMM✨")
+                    .offset(y:  -60)
+                    .font(.system(size: 40))
+                    .multilineTextAlignment(.center)
                 Text("Tap the rubbish for rubbish iuhcajjdnqudn (tap it enough times for something cool)")
                 .multilineTextAlignment(.center)
                 .offset(y:-50)
