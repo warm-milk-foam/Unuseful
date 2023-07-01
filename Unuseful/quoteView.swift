@@ -13,7 +13,7 @@ struct quoteView: View {
     @State private var isRotating = 0.0
     @State private var bobo = 0
     @State private var isSheetPresented = false
-    
+    @State private var random = 0
     var body: some View {
         ZStack {
 
@@ -29,6 +29,8 @@ struct quoteView: View {
                     print("tapped")
                     bobo = Int.random(in: 0...5)
                     let woman = Int.random(in: 0...15)
+                    let random = Int.random(in: 2...6)
+                    print(random)
                     if woman == 3 {
                         isSheetPresented = true
                     }
