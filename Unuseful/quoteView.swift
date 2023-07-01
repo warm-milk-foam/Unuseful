@@ -23,15 +23,19 @@ struct quoteView: View {
         ZStack {
             Image("who is this")
               //  .scaledToFit()
-                .frame(width: 100, height: 100)
+                .frame(width: 10, height: 10)
+            //    .offset(y:)
             VStack(spacing: 20) {
                 Text("✨Garbage✨")
                     .padding()
+                    
                     .foregroundColor(.gray)
                     .background(.red)
+                    .cornerRadius(60)
                     .offset(y:  -60)
                     .font(.system(size: 40))
                     .multilineTextAlignment(.center)
+                    
 
                 Text("""
                      Tap the rubbish for rubbish
@@ -39,7 +43,9 @@ struct quoteView: View {
                      times for something cool) !!!!!1!1!11!!!!1!1
                      """)
                     //.cornerRadius(30)
+                    .padding()
                     .background(.cyan)
+                    .cornerRadius(10)
                 .multilineTextAlignment(.center)
                 .offset(y:-50)
                 Button {
@@ -71,11 +77,18 @@ struct quoteView: View {
                 .offset(y: -40)
                 
                 
-                Text("Quote of the day:")
+                Text("🚮wise wisdom:🚮")
                     .multilineTextAlignment(.center)
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(25)
                 Text(quotes[bobo])
                     .multilineTextAlignment(.center)
                     .italic()
+                    .padding()
+                    .foregroundColor(.yellow)
+                    .background(.green)
+                    .cornerRadius(20)
                 
             }
         }
