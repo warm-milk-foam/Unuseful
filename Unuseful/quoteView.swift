@@ -18,7 +18,7 @@ struct quoteView: View {
         ZStack {
 
             VStack(spacing: 20) {
-                Text("✨GARBAGE OF WISDOMMM✨")
+                Text("✨Garbage✨")
                     .offset(y:  -60)
                     .font(.system(size: 40))
                     .multilineTextAlignment(.center)
