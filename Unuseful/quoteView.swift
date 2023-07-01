@@ -16,9 +16,10 @@ struct quoteView: View {
             } label: {
                 Image(systemName: "trash.square.fill")
                     .font(.system(size: 150))
-                
+                    //.offset(x: 0, y: -100)
+                    
             }
-            Text("Tap the pic")
+            Text("Tap the rubbish for rubbish iuhcajjdnqudn")
         }
     }
 }
