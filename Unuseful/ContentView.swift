@@ -13,7 +13,7 @@ struct ContentView: View {
         TabView{
             photoView()
                 .tabItem(){
-                    Label("Pictures", systemImage: "person")
+                    Label("Pictures", systemImage: "photo")
                 }
             starView()
                 .tabItem(){
@@ -21,15 +21,15 @@ struct ContentView: View {
                 }
             homeView()
                 .tabItem(){
-                    Label("Home", systemImage: "person")
+                    Label("Home", systemImage: "house.fill")
                 }
             quoteView()
                 .tabItem(){
-                    Label("Quotes", systemImage: "person")
+                    Label("Quotes", systemImage: "text.bubble")
                 }
             creditView()
                 .tabItem(){
-                    Label("Credits", systemImage: "person")
+                    Label("Credits", systemImage: "text.word.spacing")
                 }
         }
         
