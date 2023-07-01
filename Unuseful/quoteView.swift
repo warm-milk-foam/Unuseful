@@ -97,10 +97,21 @@ struct quoteView: View {
         }
         .sheet(isPresented: $isSheetPresented) {
             VStack {
-                Text("uhhhhhhh have fun lol")
+                Text("⭐️HAOOOOOOOOO⭐️")
+                    .padding()
+                    .background(.red)
+                    .foregroundColor(.cyan)
                 Image("1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                Text("Notice jiahen in the back")
+                    .font(.system(size:10))
+                    .opacity(0.5)
+                    .strikethrough()
+                Text("sheet")
+                    .font(.system(size:10))
+                    .opacity(0.5)
+                    .strikethrough()
             }
         }
     }
