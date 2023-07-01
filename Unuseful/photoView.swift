@@ -7,26 +7,29 @@
 
 import SwiftUI
 var pictures = [Image("tablecanon"), Image("froggy"), Image("valid"), Image("thet pai"), Image("st josephs"),  Image("flashbang"), Image("blinded"), Image("lmao"), Image("HAO yuan"), Image("camare"), Image("darter"), Image("why not"), Image("this tree got bite"), Image("who is this"), Image("mr thieffffff"), Image("no bchs?"),]
-var wawa = 0
+
 struct photoView: View {
+    @State private var wawa = 0
+    @State private var currentPicture = pictures.randomElement()
     var body: some View {
         VStack {
             Text("beautiful pictures to calm the soul😌")
                 .font(.largeTitle)
-            pictures[wawa] // test image
+                .multilineTextAlignment(.center)
+            currentPicture! // test image
                 .resizable()
                 .scaledToFit()
                 .foregroundColor(.accentColor)
             Button {
-                onTapGesture {
                     wawa += 1
                     print("help")
-                }
+                currentPicture = pictures.randomElement()
             } label: {
                 Image("3")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height:150)
+                
             }
         }
         .padding()
