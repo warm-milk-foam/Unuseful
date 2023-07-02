@@ -12,39 +12,45 @@ struct starView: View {
     @State private var yLevel1 = 0
     @State private var yLevel2 = 0
     var body: some View {
-        VStack{
-            Image("saumil")
-            Button{
-                currentMessage = starMessages.randomElement()!
-                yLevel2 = -1000
-                yLevel1 = 10
-                withAnimation(){
-                    yLevel2 = 0
-                    yLevel1 = 0
-                }
-            }label: {
-                ZStack{
-                    Image(systemName: "button.programmable")
-                        .symbolRenderingMode(.palette)
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [.black, .red, .yellow]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
+            
+            VStack{
+                Image("saumil")
+                Button{
+                    currentMessage = starMessages.randomElement()!
+                    yLevel2 = -1000
+                    yLevel1 = 10
+                    withAnimation(){
+                        yLevel2 = 0
+                        yLevel1 = 0
+                    }
+                }label: {
+                    ZStack{
+                        Image(systemName: "button.programmable")
+                            .symbolRenderingMode(.palette)
                             .foregroundStyle(.red, .black)
-                        .font(.system(size: 150))
-                        .rotation3DEffect(Angle(degrees: 60.0), axis: (x:60,y:0,z:0))
-                    Text("Press here")
-                        .foregroundColor(.black)
-                        .rotation3DEffect(Angle(degrees: 40.0), axis: (x:40,y:0,z:0))
+                            .font(.system(size: 150))
+                            .rotation3DEffect(Angle(degrees: 60.0), axis: (x:60,y:0,z:0))
+                        Text("Press here")
+                            .foregroundColor(.black)
+                            .rotation3DEffect(Angle(degrees: 40.0), axis: (x:40,y:0,z:0))
+                    }
+                    .offset(y: CGFloat(yLevel1))
                 }
-                .offset(y: CGFloat(yLevel1))
+                Text("Saumil says..")
+                    .bold()
+                    .font(.system(size: 30))
+                Text(currentMessage)
+                    .multilineTextAlignment(.center)
+                    .offset(y: CGFloat(yLevel2))
             }
-            Text("Saumil says..")
-                .bold()
-                .font(.system(size: 30))
-            Text(currentMessage)
-                .multilineTextAlignment(.center)
-                .offset(y: CGFloat(yLevel2))
         }
     }
 }
-
 struct starView_Previews: PreviewProvider {
     static var previews: some View {
         starView()

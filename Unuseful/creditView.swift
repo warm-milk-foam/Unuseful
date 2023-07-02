@@ -10,10 +10,13 @@ import SwiftUI
 struct creditView: View {
     var body: some View {
         ZStack{
-            Text("")
-                .padding(400)
-                .background(.linearGradient(colors: [.orange,.yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
-                
+            LinearGradient(
+                gradient: Gradient(colors: [.blue, .purple]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+                )
+            .edgesIgnoringSafeArea(.all)
+            
             VStack{
                 
                 Text("Credits:💫")
@@ -33,7 +36,7 @@ struct creditView: View {
                     Text("Messages from: #bestof")
                         .offset(x: 0,y:0)
                 }
-                
+
                 Group{
                     Text("Home tab: Thet Pai")
                         .font(.title2)
@@ -59,14 +62,18 @@ struct creditView: View {
                     .frame(width: 250, height: 250)
                     .offset(x: 0,y:0)
                     .cornerRadius(500)
+                
                 Text("thwank you OwO :3🥰💖")
                     .offset(x: 0, y: 0)
-                    .foregroundColor(.blue)
-                // ingo didnt make this trust
+                    .foregroundColor(.cyan)
+                
+
             }
+
         }
     }
 }
+
 
 struct creditView_Previews: PreviewProvider {
     static var previews: some View {
