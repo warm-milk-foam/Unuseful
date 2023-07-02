@@ -14,7 +14,7 @@ struct homeView: View {
         ZStack{
             Image("kilometer immorales")
                 .resizable()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
             VStack{
                 Image("cookies")
                 Button{

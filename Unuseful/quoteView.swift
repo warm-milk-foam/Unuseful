@@ -96,8 +96,12 @@ struct quoteView: View {
                     .background(.green)
                     .cornerRadius(20)
                     .bold()
+                Rectangle()
+                    .foregroundColor(.white)
+                    
                 
             }
+            .offset(y:130)
         }
         .sheet(isPresented: $isSheetPresented) {
             VStack {
