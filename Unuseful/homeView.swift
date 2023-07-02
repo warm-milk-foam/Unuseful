@@ -12,6 +12,9 @@ struct homeView: View {
     @State private var yLo = -600.0
     var body: some View {
         ZStack{
+            Image("kilometer immorales")
+                .resizable()
+                .ignoresSafeArea()
             VStack{
                 Image("cookies")
                 Button{

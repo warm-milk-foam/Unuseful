@@ -11,6 +11,7 @@ struct starView: View {
     @State private var currentMessage = ""
     @State private var yLevel1 = 0
     @State private var yLevel2 = 0
+    @State private var spinny = 0.0
     var body: some View {
         ZStack {
             LinearGradient(
@@ -22,6 +23,7 @@ struct starView: View {
             VStack{
                 Image("saumil")
                     .cornerRadius(150)
+                    .rotation3DEffect(Angle(degrees: spinny), axis: (x:0,y:1,z:0))
                 Button{
                     currentMessage = starMessages.randomElement()!
                     yLevel2 = -1000
@@ -29,6 +31,7 @@ struct starView: View {
                     withAnimation(){
                         yLevel2 = 0
                         yLevel1 = 0
+                        spinny += 360.0
                     }
                 }label: {
                     ZStack{
