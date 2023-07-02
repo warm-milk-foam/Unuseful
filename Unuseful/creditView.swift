@@ -11,7 +11,7 @@ struct creditView: View {
     var body: some View {
         ZStack{
             LinearGradient(
-                gradient: Gradient(colors: [.blue, .purple]),
+                gradient: Gradient(colors: [.orange, .yellow]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
                 )
