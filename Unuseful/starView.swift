@@ -17,6 +17,7 @@ struct starView: View {
                 gradient: Gradient(colors: [.black, .red, .yellow]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing)
+            .ignoresSafeArea()
             
             VStack{
                 Image("saumil")
