@@ -21,6 +21,7 @@ struct starView: View {
             
             VStack{
                 Image("saumil")
+                    .cornerRadius(150)
                 Button{
                     currentMessage = starMessages.randomElement()!
                     yLevel2 = -1000
