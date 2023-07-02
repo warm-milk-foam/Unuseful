@@ -107,11 +107,11 @@
 			children = (
 				D987C54E2A469ED400E39590 /* UnusefulApp.swift */,
 				D987C5502A469ED400E39590 /* ContentView.swift */,
-				D9DAE0322A4F26500054E423 /* creditView.swift */,
-				D9DAE0302A4F263D0054E423 /* homeView.swift */,
 				D9DADFF32A4EC6DD0054E423 /* photoView.swift */,
 				D9DADFF52A4EC7110054E423 /* starView.swift */,
+				D9DAE0302A4F263D0054E423 /* homeView.swift */,
 				D9DADFF72A4EC71E0054E423 /* quoteView.swift */,
+				D9DAE0322A4F26500054E423 /* creditView.swift */,
 				D987C5522A469ED600E39590 /* Assets.xcassets */,
 				D987C5542A469ED600E39590 /* Unuseful.entitlements */,
 				D987C5552A469ED600E39590 /* Preview Content */,
