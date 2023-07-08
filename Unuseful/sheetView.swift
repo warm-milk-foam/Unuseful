@@ -12,7 +12,13 @@ class GameSettings: ObservableObject {
 struct sheetView: View {
     @EnvironmentObject var settings: GameSettings
     var body: some View {
-        Text("Score: \(settings.score)")
+        VStack{
+            Image("achievement (home)")
+            Text("Congratulations! You found an easter egg.")
+                .presentationDetents([.fraction(3/7)])
+                .presentationDragIndicator(.visible)
+            Text("Score: \(settings.score)")
+        }
     }
 }
 
