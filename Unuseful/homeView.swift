@@ -28,6 +28,7 @@ struct homeView: View {
                             
                     }
                     settings.score += 1
+                    showAchievement = true
                 }label: {
                     Text("Accept all cookies")
                         .font(.largeTitle)
@@ -43,23 +44,11 @@ struct homeView: View {
             Image("tablecanon")
                 .resizable()
                 .scaledToFit()
-//                .offset(y:yLo)
-            Button{
-                showAchievement=true
-            }label: {
-                Text("/")
-                    .font(.system(size: 4))
-                    .padding()
-                    .background(.white)
-                    .opacity(0)
-            }
-            .offset(x:35,y:-77)
+                .offset(y:yLo)
+            
             
             .sheet(isPresented: $showAchievement) {
-                Image("achievement (home)")
-                Text("Congratulations! You found an easter egg.")
-                    .presentationDetents([.fraction(3/7)])
-                    .presentationDragIndicator(.visible)
+                sheetView()
             }
         }
     }

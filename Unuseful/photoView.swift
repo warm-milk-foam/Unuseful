@@ -11,6 +11,8 @@ var pictures = [Image("tablesoon"), Image("froggy"), Image("valid"), Image("thet
 struct photoView: View {
     @State private var wawa = 0
     @State private var currentPicture = pictures.randomElement()
+    @EnvironmentObject private var settings: GameSettings
+    @State private var showAchievement = false
     var body: some View {
         ZStack{
             LinearGradient(
@@ -32,6 +34,9 @@ struct photoView: View {
                         wawa += 1
                         print("help")
                     currentPicture = pictures.randomElement()
+                    if currentPicture == Image("tablesoon"){
+                        
+                    }
                 } label: {
                     Image("3")
                         .resizable()
@@ -41,6 +46,9 @@ struct photoView: View {
                 }
             }
             .padding()
+            .sheet(isPresented: $showAchievement) {
+                sheetView()
+            }
         }
     }
         }
@@ -49,5 +57,6 @@ struct photoView: View {
 struct photoView_Previews: PreviewProvider {
     static var previews: some View {
         photoView()
+            .environmentObject(GameSettings())
     }
 }
