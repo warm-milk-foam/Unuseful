@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct UnusefulApp: App {
+    @StateObject private var settings = GameSettings()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(settings)
         }
     }
 }

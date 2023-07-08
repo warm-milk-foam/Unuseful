@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D905A0A22A58581900863395 /* sheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D905A0A12A58581900863395 /* sheetView.swift */; };
 		D987C54F2A469ED400E39590 /* UnusefulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987C54E2A469ED400E39590 /* UnusefulApp.swift */; };
 		D987C5512A469ED400E39590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987C5502A469ED400E39590 /* ContentView.swift */; };
 		D987C5532A469ED600E39590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D987C5522A469ED600E39590 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D905A0A12A58581900863395 /* sheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetView.swift; sourceTree = "<group>"; };
 		D987C54B2A469ED400E39590 /* Unuseful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unuseful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D987C54E2A469ED400E39590 /* UnusefulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusefulApp.swift; sourceTree = "<group>"; };
 		D987C5502A469ED400E39590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				D987C54E2A469ED400E39590 /* UnusefulApp.swift */,
 				D987C5502A469ED400E39590 /* ContentView.swift */,
+				D905A0A12A58581900863395 /* sheetView.swift */,
 				D9DADFF32A4EC6DD0054E423 /* photoView.swift */,
 				D9DADFF52A4EC7110054E423 /* starView.swift */,
 				D9DAE0302A4F263D0054E423 /* homeView.swift */,
@@ -280,6 +283,7 @@
 				D9DAE0332A4F26500054E423 /* creditView.swift in Sources */,
 				D9DADFF62A4EC7110054E423 /* starView.swift in Sources */,
 				D987C54F2A469ED400E39590 /* UnusefulApp.swift in Sources */,
+				D905A0A22A58581900863395 /* sheetView.swift in Sources */,
 				D9DAE0312A4F263D0054E423 /* homeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,8 @@ struct homeView: View {
     @State private var angle = 0.0
     @State private var yLo = -600.0
     @State private var showAchievement = false
-    
+    @EnvironmentObject private var settings: GameSettings
+
     var body: some View {
         ZStack{
             
@@ -24,7 +25,9 @@ struct homeView: View {
                         withAnimation(.linear(duration: 5.0)){
                             angle += 90.0
                             yLo = 0.0
+                            
                     }
+                    settings.score += 1
                 }label: {
                     Text("Accept all cookies")
                         .font(.largeTitle)
@@ -65,5 +68,6 @@ struct homeView: View {
 struct homeView_Previews: PreviewProvider {
     static var previews: some View {
         homeView()
+            .environmentObject(GameSettings())
     }
 }
