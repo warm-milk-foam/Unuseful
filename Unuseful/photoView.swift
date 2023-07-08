@@ -35,7 +35,8 @@ struct photoView: View {
                         print("help")
                     currentPicture = pictures.randomElement()
                     if currentPicture == Image("tablesoon"){
-                        
+                        settings.score += 1
+                        showAchievement = true
                     }
                 } label: {
                     Image("3")
