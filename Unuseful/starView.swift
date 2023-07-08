@@ -12,6 +12,9 @@ struct starView: View {
     @State private var yLevel1 = 0
     @State private var yLevel2 = 0
     @State private var spinny = 0.0
+    @State private var showAchievement = false
+    @State private var showImage = false
+    @EnvironmentObject private var settings: GameSettings
     var body: some View {
         ZStack {
             LinearGradient(
@@ -33,6 +36,13 @@ struct starView: View {
                         yLevel1 = 0
                         spinny += 360.0
                     }
+                    if currentMessage == "Swift Innovator's Summit 2024: Our grand plan to get rid of you"{
+                        showImage = true
+                        settings.score += 1
+                        showAchievement = true
+                    }else{
+                        showImage = false
+                    }
                 }label: {
                     ZStack{
                         Image(systemName: "button.programmable")
@@ -52,6 +62,15 @@ struct starView: View {
                 Text(currentMessage)
                     .multilineTextAlignment(.center)
                     .offset(y: CGFloat(yLevel2))
+                if showImage{
+                    Image("swiftteam")
+                        .resizable()
+                        .scaledToFit()
+                }
+                
+            }
+            .sheet(isPresented: $showAchievement) {
+                sheetView()
             }
         }
     }
@@ -59,5 +78,6 @@ struct starView: View {
 struct starView_Previews: PreviewProvider {
     static var previews: some View {
         starView()
+            .environmentObject(GameSettings())
     }
 }
